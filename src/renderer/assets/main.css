@@ -1,0 +1,83 @@
+@import './base.css';
+
+html {
+  border: 4px solid var(--text-primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  overflow: hidden !important;
+  user-select: none !important;
+  background: var(--background-primary)
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 8px);
+  padding: var(--spacing-lg);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.titlebar {
+  position: fixed;
+  top: 20px;
+  left: 4px;
+  right: 4px;
+  height: 40px;
+  background-color: var(--background-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-md);
+  z-index: 1000;
+  -webkit-app-region: drag;
+}
+
+.titlebar span {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-left: 0;
+  flex-shrink: 0;
+}
+
+.window-controls {
+  display: flex;
+  gap: var(--spacing-xs);
+  -webkit-app-region: no-drag;
+  margin-right: 0;
+  flex-shrink: 0;
+}
+
+ 
+.window-controls button {
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  border: 3px solid var(--text-primary);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.window-controls button:hover {
+  transform: scale(1.05);
+}
+

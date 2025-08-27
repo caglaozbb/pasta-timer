@@ -6,15 +6,28 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
-    />
+      content="default-src 'self'; 
+           script-src 'self'; 
+           style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+           font-src 'self' https://fonts.gstatic.com;
+           img-src 'self' data:"
+/>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
     <link href="./assets/main.css" type="text/css" rel="stylesheet" />
   </head>
 
   <body>
     <div id="app">
-     <h1>Pasta Timer</h1>
+      <div class="titlebar">
+        <span>Pasta Timer</span>
+        <div class="window-controls">
+          <button id="btn-min">-</button>
+          <button id="btn-close">x</button>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./src/renderer.js"></script>
