@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: pasta-timer
+appId: com.pasta-timer.app
+productName: Pasta Timer
 directories:
   buildResources: build
 files:

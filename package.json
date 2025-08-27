@@ -1,7 +1,8 @@
 {
   "name": "pasta-timer",
+  "productName":"Pasta Timer",
   "version": "1.0.0",
-  "description": "A minimal Electron application with JavaScript",
+  "description": "A beautiful pasta timer application built with Electron",
   "main": "./out/main/index.js",
   "author": "example.com",
   "homepage": "https://electron-vite.org",

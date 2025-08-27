@@ -21,13 +21,66 @@
 
   <body>
     <div id="app">
-      <div class="titlebar">
-        <span>Pasta Timer</span>
-        <div class="window-controls">
-          <button id="btn-min">-</button>
-          <button id="btn-close">x</button>
-        </div>
+        <!-- Başlık her zaman görünecek -->
+  <div class="titlebar">
+    <span>Pasta Timer</span>
+    <div class="window-controls">
+      <button id="btn-min">-</button>
+      <button id="btn-close">x</button>
+    </div>
+  </div>
+
+  <!-- Sayfalar (sectionlar) -->
+  <section id="page-start" class="page-active">
+    <img src="./assets/pasta.png" alt="Pasta" class="pasta-img"/>
+    <h1 class="text-center">Let's cook<br> your pasta!</h1>
+    <button data-route="select">START</button>
+  </section>
+
+  <section id="page-select" class="page">
+    <h5 class="select-title text-center">Which pasta type are you cooking?</h5>
+    <div class="pasta-grid">
+      <div class="pasta-item" data-pasta="fettucine" data-route="timer">
+        <img src="./assets/fettucine.png" alt="Pasta" class="pasta-img-select"/>
+        <h5>Fettucine</h5>
+        <p>3 - 5 min</p>
       </div>
+      <div class="pasta-item" data-pasta="spaghetti" data-route="timer">
+        <img src="./assets/spaghetti.png" alt="Pasta" class="pasta-img-select"/>
+        <h5>Spaghetti</h5>
+        <p>8 - 10 min</p>
+      </div>
+      <div class="pasta-item" data-pasta="bowties" data-route="timer">
+        <img src="./assets/bow.png" alt="Pasta" class="pasta-img-select"/>
+        <h5>Bowties</h5>
+        <p>10 - 12 min</p>
+      </div>
+      <div class="pasta-item" data-pasta="penne" data-route="timer">
+        <img src="./assets/penne.png" alt="Pasta" class="pasta-img-select"/>
+        <h5>Penne</h5>
+        <p>12 - 15 min</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="page-timer" class="page">
+    <h2 class="cooking-title">Pasta is cooking...</h2>
+    <img src="./assets/pot.png" alt="pot" class="pot-img pot-icon">
+    <div class="timer-display" id="timer">00:00</div>
+    <div class="timer-controls">
+      <button id="pause-btn" class="timer-btn">PAUSE</button>
+      <button id="reset-btn" class="timer-btn" data-route="select">RESET</button>
+    </div>
+    
+    <!-- Done State (Hidden by default) -->
+    <div id="done-state" class="done-state" style="display: none;">
+      <h1 class="ready-title">PASTA IS READY!</h1>
+      <img src="./assets/pasta.png" alt="Pasta" class="pasta-img-ready">
+      <div class="done-controls">
+        <button id="done-btn" class="timer-btn timer-btn-done" data-route="select">DONE</button>
+      </div>
+    </div>
+  </section>
     </div>
 
     <script type="module" src="./src/renderer.js"></script>
