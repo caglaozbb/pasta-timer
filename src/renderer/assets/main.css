@@ -13,7 +13,7 @@ body {
   justify-content: center; 
   overflow: hidden !important;
   user-select: none !important;
-  background: var(--background-primary)
+  background: var(--background-primary);
 }
 
 #app {
@@ -47,7 +47,6 @@ body {
   font-weight: 600;
   color: var(--text-primary);
   font-size: 1.5rem;
-  margin-left: 0;
   flex-shrink: 0;
 }
 
@@ -55,15 +54,12 @@ body {
   display: flex;
   gap: var(--spacing-xs);
   -webkit-app-region: no-drag;
-  margin-right: 0;
   flex-shrink: 0;
 }
 
- 
 .window-controls button {
   width: 30px;
   height: 30px;
-  border-radius: 0;
   font-size: 1.2rem;
   font-weight: 700;
   background-color: var(--background-secondary);
@@ -73,8 +69,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  line-height: 1;
   cursor: pointer;
   user-select: none;
 }
@@ -89,58 +83,27 @@ body {
   color: var(--background-secondary);
 }
 
-.window-controls button:focus {
-  outline: none;
-}
-
-/* Pasta Image */
-.pasta-img {
-  width: 160px;
-  height: 100px;
-  margin-bottom: var(--spacing-lg);
-}
-
-/* Page Styles */
 .page {
   display: none !important;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: var(--spacing-xl);
 }
 
-.page.active {
-  display: flex !important;
-}
-
-/* Start Page */
-#page-start h1 {
-  font-size: 2.3rem;
-  font-weight: 500;
-  margin-bottom: var(--spacing-lg);
-  color: var(--text-primary);
-}
 .page-active {
   background-color: var(--background-secondary);
-  border-radius: 0;
   border: 4px solid var(--text-primary);
   width: 340px;
   height: 400px;
   position: absolute;
   top: 70px;
   left: 25px;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
 }
-#page-start button {
-  width: 225px;
-  height: 55px;
-  font-size: 2.5rem;
-  padding: var(--spacing-md) var(--spacing-xl);
+
+.btn-primary, 
+button {
   background-color: var(--button-primary);
   color: var(--text-primary);
   border: 3px solid var(--text-primary);
@@ -148,39 +111,47 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all var(--transition-fast);
+  font-weight: 600;
+  font-family: 'Baloo 2', sans-serif;
 }
 
-#page-start button:hover {
+.btn-primary:hover,
+button:hover {
   background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
-/* Select Page */
-#page-select {
-  background-color: var(--background-secondary);
-  border-radius: 0;
-  border: 4px solid var(--text-primary);
-  width: 340px;
-  height: 400px;
-  position: absolute;
-  top: 70px;
-  left: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+#page-start {
+  text-align: center;
 }
 
-#page-select h1 {
-  font-size: 2rem;
+#page-start h1 {
+  font-size: 2.3rem;
   font-weight: 500;
   margin-bottom: var(--spacing-lg);
   color: var(--text-primary);
   text-align: center;
 }
 
-/* Pasta Selection Grid */
+#page-start button {
+  width: 225px;
+  height: 55px;
+  font-size: 2.5rem;
+  padding: var(--spacing-md) var(--spacing-xl);
+  margin: 0 auto;
+}
+
+.select-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+}
+
 .pasta-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -198,8 +169,6 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid transparent;
-  border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   cursor: pointer;
   width: 90px;
@@ -209,46 +178,25 @@ body {
   transform: scale(1.05);
 }
 
-.pasta-item.selected {
-  border-color: var(--button-primary);
-  background-color: var(--background-primary);
-}
-
 .pasta-item h5 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
   color: var(--text-primary);
   background-color: var(--background-secondary);
-  border-radius: var(--radius-sm);
   width: 100%;
   text-align: center;
   box-sizing: border-box;
+  margin: 0;
 }
 
 .pasta-item p {
   margin: 0;
-  padding: 0;
   font-size: 0.9rem;
   color: var(--text-secondary);
 }
 
-/* Timer Page */
 #page-timer {
-  background-color: var(--background-secondary);
-  border-radius: 0;
-  border: 4px solid var(--text-primary);
-  width: 340px;
-  height: 400px;
-  position: absolute;
-  top: 70px;
-  left: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  text-align: center;
 }
 
 .cooking-title {
@@ -260,12 +208,11 @@ body {
 }
 
 .pot-icon {
-  font-size: 2rem;
   margin-bottom: var(--spacing-sm);
   animation: bounce 2s infinite;
 }
 
-.pot-img{
+.pot-img {
   width: 130px;
   height: 130px;
 }
@@ -289,28 +236,22 @@ body {
   width: 120px;
   height: 45px;
   font-size: 1.2rem;
-  font-weight: 600;
-  background-color: var(--button-primary);
-  color: var(--text-primary);
   border: 3px solid var(--text-primary);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition-fast);
 }
 
-.timer-btn-done{
+.timer-btn-done {
   width: 180px;
   height: 45px;
+  border: 3px solid var(--text-primary);
 }
 
-.timer-btn:hover {
-  background-color: var(--button-hover);
-  transform: translateY(-2px);
+.page-timer.timer-done .timer-controls,
+.page-timer.timer-done .cooking-title,
+.page-timer.timer-done .pot-icon,
+.page-timer.timer-done .timer-display {
+  display: none;
 }
 
-/* Done State */
 .done-state {
   position: absolute;
   top: 0;
@@ -318,12 +259,15 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--background-secondary);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
   box-sizing: border-box;
+}
+
+.done-state.show {
+  display: flex;
 }
 
 .ready-title {
@@ -334,15 +278,22 @@ body {
   margin-bottom: var(--spacing-lg);
 }
 
+.done-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.pasta-img, 
 .pasta-img-ready {
   width: 160px;
   height: 100px;
   margin-bottom: var(--spacing-lg);
 }
 
-.done-controls {
-  display: flex;
-  justify-content: center;
+.pasta-img-select {
+  width: 80px;
+  height: 80px;
+  margin-bottom: var(--spacing-sm);
 }
 
 @keyframes bounce {
@@ -355,22 +306,4 @@ body {
   60% {
     transform: translateY(-5px);
   }
-}
-
-
-.pasta-img-select {
-  width: 80px;
-  height: 80px;
-  margin-bottom: var(--spacing-sm);
-}
-
-.select-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: var(--spacing-lg);
-  background-color: var(--background-secondary);
-  width: 100%;
 }

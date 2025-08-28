@@ -12,7 +12,7 @@
            font-src 'self' https://fonts.gstatic.com;
            img-src 'self' data:"
 />
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
@@ -21,7 +21,6 @@
 
   <body>
     <div id="app">
-        <!-- Başlık her zaman görünecek -->
   <div class="titlebar">
     <span>Pasta Timer</span>
     <div class="window-controls">
@@ -30,7 +29,6 @@
     </div>
   </div>
 
-  <!-- Sayfalar (sectionlar) -->
   <section id="page-start" class="page-active">
     <img src="./assets/pasta.png" alt="Pasta" class="pasta-img"/>
     <h1 class="text-center">Let's cook<br> your pasta!</h1>
@@ -72,7 +70,6 @@
       <button id="reset-btn" class="timer-btn" data-route="select">RESET</button>
     </div>
     
-    <!-- Done State (Hidden by default) -->
     <div id="done-state" class="done-state" style="display: none;">
       <h1 class="ready-title">PASTA IS READY!</h1>
       <img src="./assets/pasta.png" alt="Pasta" class="pasta-img-ready">
