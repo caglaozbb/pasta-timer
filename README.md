@@ -10,6 +10,12 @@ A beautiful desktop pasta timer application built with **Electron**, featuring c
 
 ---
 
+## 🎬 Demo
+
+![Pasta Timer Demo](src/renderer/assets/pasta-timer.gif)
+
+---
+
 ## 🎯 Features
 
 - **Interactive Cooking Flow:** 4-page user journey from start to completion
@@ -38,6 +44,8 @@ A beautiful desktop pasta timer application built with **Electron**, featuring c
 - **Framework:** Electron with `electron-vite` for hot reloading  
 - **Design:** Custom Figma designs with hand-drawn icons  
 - **Audio:** Integrated cooking sounds and completion alerts  
+
+![Pasta Timer Screenshot](src/renderer/assets/Screenshot-pasta-timer.png)
 
 ---
 
