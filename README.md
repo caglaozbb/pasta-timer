@@ -12,7 +12,7 @@ A beautiful desktop pasta timer application built with **Electron**, featuring c
 
 ## 🎬 Demo
 
-![Pasta Timer Demo](src/renderer/assets/pasta-timer.gif)
+<img src="src/renderer/assets/pasta-timer.gif" alt="Pasta Timer Demo" width="400">
 
 ---
 
