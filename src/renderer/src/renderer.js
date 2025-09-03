@@ -55,7 +55,7 @@ let isPaused = false
 
 function startTimer(pastaType) {
   const pastaTimes = {
-    'fettucine': 3 * 60, 
+    'fettucine': 0.1 * 60, 
     'spaghetti': 10 * 60, 
     'bowties': 12 * 60,  
     'penne': 15 * 60     
